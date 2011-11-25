@@ -1,0 +1,12 @@
+diff -up ./setup.py.orig ./setup.py
+--- ./setup.py.orig	2011-08-25 07:00:10.000000000 -0400
++++ ./setup.py	2011-11-19 08:47:42.630825891 -0500
+@@ -90,7 +90,7 @@ def default_build():
+         data_files=[('/usr/share/applications', desktop_files),
+                     ('/usr/share/chirp/images', image_files),
+                     ('/usr/share/chirp', xsd_files),
+-                    ('/usr/share/doc/chirp', ['COPYING']),
++                    ('/usr/share/doc/chirp-0.1.12', ['COPYING']),
+ 		    ('/usr/share/pixmaps', ['share/chirp.png']),
+                     ('/usr/share/man/man1', ["share/chirpw.1"]),
+                     ] + locale_files)

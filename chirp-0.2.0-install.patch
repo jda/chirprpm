@@ -1,0 +1,23 @@
+diff -Naur chirp-0.2.0.orig/setup.py chirp-0.2.0/setup.py
+--- chirp-0.2.0.orig/setup.py	2012-02-29 02:01:12.000000000 -0600
++++ chirp-0.2.0/setup.py	2012-03-19 12:13:15.007062801 -0500
+@@ -105,13 +105,12 @@
+         packages=["chirp", "chirpui"],
+         version=CHIRP_VERSION,
+         scripts=["chirpw"],
+-        data_files=[('usr/share/applications', desktop_files),
+-                    ('usr/share/chirp/images', image_files),
+-                    ('usr/share/chirp', xsd_files),
+-                    ('usr/share/doc/chirp', ['COPYING']),
+-		    ('usr/share/pixmaps', ['share/chirp.png']),
+-                    ('usr/share/man/man1', ["share/chirpw.1"]),
+-                    ('usr/share/chirp/stock_configs', stock_configs),
++        data_files=[('share/applications', desktop_files),
++                    ('share/chirp/images', image_files),
++                    ('share/chirp', xsd_files),
++		    ('share/pixmaps', ['share/chirp.png']),
++                    ('share/man/man1', ["share/chirpw.1"]),
++                    ('share/chirp/stock_configs', stock_configs),
+                     ] + locale_files)
+ 
+ def rpttool_build():

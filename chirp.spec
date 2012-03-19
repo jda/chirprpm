@@ -16,6 +16,7 @@ Patch0:         chirp-0.2.0-install.patch
 BuildArch:      noarch
 BuildRequires:  python-devel
 BuildRequires:  desktop-file-utils
+BuildRequires:  pyserial
 Requires:       pyserial
 
 %description

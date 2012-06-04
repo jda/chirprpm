@@ -1,5 +1,5 @@
 Name:           chirp
-Version:        0.2.0
+Version:        0.2.2
 Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
@@ -18,6 +18,7 @@ BuildRequires:  python-devel
 BuildRequires:  desktop-file-utils
 BuildRequires:  libxml2-python
 BuildRequires:  pyserial
+Requires:       libxml2-python
 Requires:       pyserial
 
 %description
@@ -57,6 +58,9 @@ desktop-file-install \
 
 
 %changelog
+* Mon Jun 04 2012 Richard Shaw <hobbes1069@gmail.com> - 0.2.2-1
+- Update to latest upstream release.
+
 * Sun Mar 18 2012 Richard Shaw <hobbes1069@gmail.com> - 0.2.0-1
 - Update to latest upstream release.
 

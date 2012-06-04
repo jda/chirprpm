@@ -11,7 +11,7 @@ Source0:        http://chirp.danplanet.com/download/%{version}/%{name}-%{version
 # Source:http://dp67.fedorapeople.org/pkgs/DESKTOP/chirp.desktop
 Source1:        %{name}.desktop
 
-Patch0:         chirp-0.2.0-install.patch
+Patch0:         chirp-0.2.2-install.patch
 
 BuildArch:      noarch
 BuildRequires:  python-devel

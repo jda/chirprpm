@@ -1,5 +1,5 @@
 Name:           chirp
-Version:        0.3.0
+Version:        0.3.1
 Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
@@ -59,6 +59,9 @@ desktop-file-install \
 
 
 %changelog
+* Mon May 06 2013 Richard Shaw <hobbes1069@gmail.com> - 0.3.1-1
+- Update to latest upstream release.
+
 * Sat Feb 16 2013 Richard Shaw <hobbes1069@gmail.com> - 0.3.0-1
 - Update to latest upstream release.
 

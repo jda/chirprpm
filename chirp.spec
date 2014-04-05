@@ -1,6 +1,6 @@
 Name:           chirp
-Version:        0.3.1
-Release:        2%{?dist}
+Version:        0.4.0
+Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
 Group:          Applications/Communications
@@ -14,13 +14,16 @@ Source1:        %{name}.desktop
 Patch0:         chirp-0.2.2-install.patch
 
 BuildArch:      noarch
-BuildRequires:  python-devel
+
+BuildRequires:  python2-devel
 BuildRequires:  desktop-file-utils
 BuildRequires:  libxml2-python
 BuildRequires:  pyserial
+
 Requires:       libxml2-python
 Requires:       pyserial
 Requires:       python-suds
+
 
 %description
 Chirp is a tool for programming two-way radio equipment
@@ -59,6 +62,9 @@ desktop-file-install \
 
 
 %changelog
+* Wed Mar 26 2014 Richard Shaw <hobbes1069@gmail.com> - 0.4.0-1
+- Update to latest upstream release.
+
 * Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.3.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
 

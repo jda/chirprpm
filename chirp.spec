@@ -1,6 +1,6 @@
 Name:           chirp
 Version:        0.4.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
 Group:          Applications/Communications
@@ -62,6 +62,9 @@ desktop-file-install \
 
 
 %changelog
+* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.4.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
+
 * Wed Mar 26 2014 Richard Shaw <hobbes1069@gmail.com> - 0.4.0-1
 - Update to latest upstream release.
 

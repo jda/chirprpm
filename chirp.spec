@@ -1,12 +1,14 @@
+%global src_name chirp-daily
+
 Name:           chirp
-Version:        0.4.1
-Release:        2%{?dist}
+Version:        20151130
+Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
 Group:          Applications/Communications
 License:        GPLv3+
 URL:            http://chirp.danplanet.com/
-Source0:        http://chirp.danplanet.com/download/%{version}/%{name}-%{version}.tar.gz
+Source0:        http://trac.chirp.danplanet.com/chirp_daily/daily-%{version}/%{src_name}-%{version}.tar.gz
 # Installing correct .desktop file
 # Source:http://dp67.fedorapeople.org/pkgs/DESKTOP/chirp.desktop
 Source1:        %{name}.desktop
@@ -33,7 +35,7 @@ the hood.
 
 
 %prep
-%setup -q
+%setup -q -n %{src_name}-%{version}
 %patch0 -p1 -b .inst
 
 
@@ -52,9 +54,8 @@ desktop-file-install \
 %files
 %doc COPYING
 %{_bindir}/chirpw
-%{python_sitelib}/%{name}-%{version}-py2.7.egg-info
+%{python_sitelib}/%{src_name}_%{version}-py2.7.egg-info
 %{python_sitelib}/%{name}/
-%{python_sitelib}/chirpui/
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}/
 %{_mandir}/man1/chirpw.1.gz
@@ -62,6 +63,9 @@ desktop-file-install \
 
 
 %changelog
+* Mon Nov 30 2015 Richard Shaw <hobbes1069@gmail.com> - 20151130-1
+- Update to new rolling release.
+
 * Wed Jun 17 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.4.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 

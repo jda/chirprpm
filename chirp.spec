@@ -52,7 +52,8 @@ desktop-file-install \
 
 
 %files
-%doc COPYING
+%{!?_licensedir:%global license %doc}
+%license COPYING
 %{_bindir}/chirpw
 %{python_sitelib}/%{src_name}_%{version}-py2.7.egg-info
 %{python_sitelib}/%{name}/

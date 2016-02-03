@@ -2,7 +2,7 @@
 
 Name:           chirp
 Version:        20151130
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
 Group:          Applications/Communications
@@ -64,6 +64,9 @@ desktop-file-install \
 
 
 %changelog
+* Wed Feb 03 2016 Fedora Release Engineering <releng@fedoraproject.org> - 20151130-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
+
 * Mon Nov 30 2015 Richard Shaw <hobbes1069@gmail.com> - 20151130-1
 - Update to new rolling release.
 

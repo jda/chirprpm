@@ -1,8 +1,8 @@
 %global src_name chirp-daily
 
 Name:           chirp
-Version:        20151130
-Release:        2%{?dist}
+Version:        20160215
+Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
 Group:          Applications/Communications
@@ -64,6 +64,9 @@ desktop-file-install \
 
 
 %changelog
+* Thu Feb 18 2016 Richard Shaw <hobbes1069@gmail.com> - 20160215-1
+- Update to latest upstream release.
+
 * Wed Feb 03 2016 Fedora Release Engineering <releng@fedoraproject.org> - 20151130-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
 

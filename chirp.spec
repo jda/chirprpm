@@ -1,7 +1,7 @@
 %global src_name chirp-daily
 
 Name:           chirp
-Version:        20160229
+Version:        20160402
 Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
@@ -50,20 +50,28 @@ the hood.
 desktop-file-install \
         --dir=${RPM_BUILD_ROOT}%{_datadir}/applications %{SOURCE1}
 
+%find_lang CHIRP
 
-%files
-%{!?_licensedir:%global license %doc}
+
+%files -f CHIRP.lang
 %license COPYING
 %{_bindir}/chirpw
 %{python_sitelib}/%{src_name}_%{version}-py2.7.egg-info
 %{python_sitelib}/%{name}/
 %{_datadir}/applications/%{name}.desktop
+%exclude %{_datadir}/%{name}/locale
 %{_datadir}/%{name}/
 %{_mandir}/man1/chirpw.1.gz
 %{_datadir}/pixmaps/%{name}.png
 
 
 %changelog
+* Wed Apr  6 2016 Richard Shaw <hobbes1069@gmail.com> - 20160402-1
+- Update to latest upstream release.
+
+* Wed Mar  9 2016 Richard Shaw <hobbes1069@gmail.com> - 20160309-1
+- Update to latest upstream release.
+
 * Mon Feb 29 2016 Richard Shaw <hobbes1069@gmail.com> - 20160229-1
 - Update to latest upstream release.
 

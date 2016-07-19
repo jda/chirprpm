@@ -2,7 +2,7 @@
 
 Name:           chirp
 Version:        20160706
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
 Group:          Applications/Communications
@@ -66,6 +66,9 @@ desktop-file-install \
 
 
 %changelog
+* Tue Jul 19 2016 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 20160706-2
+- https://fedoraproject.org/wiki/Changes/Automatic_Provides_for_Python_RPM_Packages
+
 * Thu Jul  7 2016 Richard Shaw <hobbes1069@gmail.com> - 20160706-1
 - Update to latest upstream release.
 

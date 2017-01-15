@@ -1,7 +1,7 @@
 %global src_name chirp-daily
 
 Name:           chirp
-Version:        20161018
+Version:        20170115
 Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
@@ -66,6 +66,9 @@ desktop-file-install \
 
 
 %changelog
+* Sun Jan 15 2017 Richard Shaw <hobbes1069@gmail.com> - 20170115-1
+- Update to latest upstream release.
+
 * Tue Oct 18 2016 Richard Shaw <hobbes1069@gmail.com> - 20161018-1
 - Update to latest upstream release.
 

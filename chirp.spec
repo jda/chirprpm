@@ -1,8 +1,8 @@
 %global src_name chirp-daily
 
 Name:           chirp
-Version:        20170115
-Release:        2%{?dist}
+Version:        20170222
+Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
 Group:          Applications/Communications
@@ -22,6 +22,7 @@ BuildRequires:  desktop-file-utils
 BuildRequires:  libxml2-python
 BuildRequires:  pyserial
 
+Requires:       pygtk2
 Requires:       libxml2-python
 Requires:       pyserial
 Requires:       python-suds
@@ -66,6 +67,10 @@ desktop-file-install \
 
 
 %changelog
+* Sat Mar  4 2017 Richard Shaw <hobbes1069@gmail.com> - 20170222-1
+- Update to latest upstream release.
+- Add pygtk2 as a runtime requirement, fixes RHBZ#1428979.
+
 * Fri Feb 10 2017 Fedora Release Engineering <releng@fedoraproject.org> - 20170115-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
 

@@ -1,7 +1,7 @@
 %global src_name chirp-daily
 
 Name:           chirp
-Version:        20170222
+Version:        20170711
 Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
@@ -9,8 +9,6 @@ Group:          Applications/Communications
 License:        GPLv3+
 URL:            http://chirp.danplanet.com/
 Source0:        http://trac.chirp.danplanet.com/chirp_daily/daily-%{version}/%{src_name}-%{version}.tar.gz
-# Installing correct .desktop file
-# Source:http://dp67.fedorapeople.org/pkgs/DESKTOP/chirp.desktop
 Source1:        %{name}.desktop
 
 Patch0:         chirp-0.2.2-install.patch
@@ -67,6 +65,9 @@ desktop-file-install \
 
 
 %changelog
+* Tue Jul 11 2017 Richard Shaw <hobbes1069@gmail.com> - 20170711-1
+- Update to latest upstream release.
+
 * Sat Mar  4 2017 Richard Shaw <hobbes1069@gmail.com> - 20170222-1
 - Update to latest upstream release.
 - Add pygtk2 as a runtime requirement, fixes RHBZ#1428979.

@@ -2,7 +2,7 @@
 
 Name:           chirp
 Version:        20170711
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
 Group:          Applications/Communications
@@ -65,6 +65,9 @@ desktop-file-install \
 
 
 %changelog
+* Wed Jul 26 2017 Fedora Release Engineering <releng@fedoraproject.org> - 20170711-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
+
 * Tue Jul 11 2017 Richard Shaw <hobbes1069@gmail.com> - 20170711-1
 - Update to latest upstream release.
 

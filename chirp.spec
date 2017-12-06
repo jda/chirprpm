@@ -1,8 +1,8 @@
 %global src_name chirp-daily
 
 Name:           chirp
-Version:        20170711
-Release:        2%{?dist}
+Version:        20171204
+Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
 Group:          Applications/Communications
@@ -17,13 +17,13 @@ BuildArch:      noarch
 
 BuildRequires:  python2-devel
 BuildRequires:  desktop-file-utils
-BuildRequires:  libxml2-python
+BuildRequires:  python-libxml2
 BuildRequires:  pyserial
 
 Requires:       pygtk2
 Requires:       libxml2-python
 Requires:       pyserial
-Requires:       python-suds
+Requires:       python2-suds
 
 
 %description
@@ -55,8 +55,8 @@ desktop-file-install \
 %files -f CHIRP.lang
 %license COPYING
 %{_bindir}/chirpw
-%{python_sitelib}/%{src_name}_%{version}-py2.7.egg-info
-%{python_sitelib}/%{name}/
+%{python2_sitelib}/%{src_name}_%{version}-py2.7.egg-info
+%{python2_sitelib}/%{name}/
 %{_datadir}/applications/%{name}.desktop
 %exclude %{_datadir}/%{name}/locale
 %{_datadir}/%{name}/
@@ -65,6 +65,11 @@ desktop-file-install \
 
 
 %changelog
+* Wed Dec 06 2017 Richard Shaw <hobbes1069@gmail.com> - 20171204-1
+- Update to latest upstream release.
+- Fix ambiguous Python 2 dependency declarations
+  https://fedoraproject.org/wiki/FinalizingFedoraSwitchtoPython3
+
 * Wed Jul 26 2017 Fedora Release Engineering <releng@fedoraproject.org> - 20170711-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
 

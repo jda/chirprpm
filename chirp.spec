@@ -1,4 +1,5 @@
 %global src_name chirp-daily
+%global debug_package %{nil}
 
 Name:           chirp
 Version:        20171204
@@ -16,9 +17,9 @@ Patch0:         chirp-0.2.2-install.patch
 BuildArch:      noarch
 
 BuildRequires:  python2-devel
+BuildRequires:  python2-libxml2
+BuildRequires:  python2-pyserial
 BuildRequires:  desktop-file-utils
-BuildRequires:  python-libxml2
-BuildRequires:  pyserial
 
 Requires:       pygtk2
 Requires:       libxml2-python
@@ -55,13 +56,14 @@ desktop-file-install \
 %files -f CHIRP.lang
 %license COPYING
 %{_bindir}/chirpw
+%{_bindir}/rpttool
 %{python2_sitelib}/%{src_name}_%{version}-py2.7.egg-info
 %{python2_sitelib}/%{name}/
 %{_datadir}/applications/%{name}.desktop
-%exclude %{_datadir}/%{name}/locale
 %{_datadir}/%{name}/
 %{_mandir}/man1/chirpw.1.gz
 %{_datadir}/pixmaps/%{name}.png
+%exclude %{_datadir}/%{name}/locale
 
 
 %changelog

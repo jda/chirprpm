@@ -3,7 +3,7 @@
 
 Name:           chirp
 Version:        20171204
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
 Group:          Applications/Communications
@@ -22,8 +22,8 @@ BuildRequires:  python2-pyserial
 BuildRequires:  desktop-file-utils
 
 Requires:       pygtk2
-Requires:       libxml2-python
-Requires:       pyserial
+Requires:       python2-libxml2
+Requires:       python2-pyserial
 Requires:       python2-suds
 
 
@@ -67,6 +67,10 @@ desktop-file-install \
 
 
 %changelog
+* Fri Dec 15 2017 Iryna Shcherbina <ishcherb@redhat.com> - 20171204-2
+- Update Python 2 dependency declarations to new packaging standards
+  (See https://fedoraproject.org/wiki/FinalizingFedoraSwitchtoPython3)
+
 * Wed Dec 06 2017 Richard Shaw <hobbes1069@gmail.com> - 20171204-1
 - Update to latest upstream release.
 - Fix ambiguous Python 2 dependency declarations

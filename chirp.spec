@@ -3,7 +3,7 @@
 
 Name:           chirp
 Version:        20171204
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
 Group:          Applications/Communications
@@ -67,6 +67,9 @@ desktop-file-install \
 
 
 %changelog
+* Wed Feb 07 2018 Fedora Release Engineering <releng@fedoraproject.org> - 20171204-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
+
 * Fri Dec 15 2017 Iryna Shcherbina <ishcherb@redhat.com> - 20171204-2
 - Update Python 2 dependency declarations to new packaging standards
   (See https://fedoraproject.org/wiki/FinalizingFedoraSwitchtoPython3)

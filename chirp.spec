@@ -2,7 +2,7 @@
 %global debug_package %{nil}
 
 Name:           chirp
-Version:        20180606
+Version:        20180614
 Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
@@ -11,11 +11,13 @@ License:        GPLv3+
 URL:            http://chirp.danplanet.com/
 Source0:        http://trac.chirp.danplanet.com/chirp_daily/daily-%{version}/%{src_name}-%{version}.tar.gz
 Source1:        %{name}.desktop
+Source2:        %{name}.appdata.xml
 
 Patch0:         chirp-0.2.2-install.patch
 
 BuildArch:      noarch
 
+BuildRequires:  libappstream-glib
 BuildRequires:  python2-devel
 BuildRequires:  python2-libxml2
 BuildRequires:  python2-pyserial
@@ -28,10 +30,9 @@ Requires:       python2-suds
 
 
 %description
-Chirp is a tool for programming two-way radio equipment
-It provides a generic user interface to the programming
-data and process that can drive many radio models under
-the hood.
+Chirp is a tool for programming two-way radio equipment It provides a generic
+user interface to the programming data and process that can drive many radio
+models under the hood.
 
 
 %prep
@@ -52,21 +53,30 @@ desktop-file-install \
 
 %find_lang CHIRP
 
+mkdir -p %{buildroot}%{_metainfodir}
+install -pm 0644 %{SOURCE2} %{buildroot}%{_metainfodir}/
+appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/*.appdata.xml
+
 
 %files -f CHIRP.lang
 %license COPYING
 %{_bindir}/chirpw
 %{_bindir}/rpttool
+%{_datadir}/%{name}/
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/pixmaps/%{name}.png
+%{_mandir}/man1/chirpw.1.gz
+%{_metainfodir}/%{name}.appdata.xml
 %{python2_sitelib}/%{src_name}_%{version}-py2.7.egg-info
 %{python2_sitelib}/%{name}/
-%{_datadir}/applications/%{name}.desktop
-%{_datadir}/%{name}/
-%{_mandir}/man1/chirpw.1.gz
-%{_datadir}/pixmaps/%{name}.png
 %exclude %{_datadir}/%{name}/locale
 
 
 %changelog
+* Thu Jun 14 2018 Richard Shaw <hobbes1069@gmail.com> - 20180614-1
+- Update to 20180614.
+- Add appdata file.
+
 * Wed Jun 06 2018 Richard Shaw <hobbes1069@gmail.com> - 20180606-1
 - Update to 20180606.
 

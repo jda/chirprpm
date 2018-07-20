@@ -41,11 +41,11 @@ models under the hood.
 
 
 %build
-%{__python} setup.py build
+%{__python2} setup.py build
 
 
 %install
-%{__python} setup.py install -O1 --skip-build --root="%{buildroot}" --prefix="%{_prefix}"
+%{__python2} setup.py install -O1 --skip-build --root="%{buildroot}" --prefix="%{_prefix}"
 
 # Wrong .desktop config lets install the correct .desktop
 desktop-file-install \

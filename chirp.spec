@@ -11,7 +11,6 @@ License:        GPLv3+
 URL:            http://chirp.danplanet.com/
 Source0:        http://trac.chirp.danplanet.com/chirp_daily/daily-%{version}/%{src_name}-%{version}.tar.gz
 Source1:        %{name}.desktop
-Source2:        %{name}.appdata.xml
 
 Patch0:         chirp-0.2.2-install.patch
 
@@ -19,8 +18,8 @@ BuildArch:      noarch
 
 BuildRequires:  libappstream-glib
 BuildRequires:  python2-devel
-BuildRequires:  python2-libxml2
-BuildRequires:  python2-pyserial
+BuildRequires:  libxml2-python2
+BuildRequires:  pyserial
 BuildRequires:  desktop-file-utils
 
 Requires:       pygtk2
@@ -53,10 +52,6 @@ desktop-file-install \
 
 %find_lang CHIRP
 
-mkdir -p %{buildroot}%{_metainfodir}
-install -pm 0644 %{SOURCE2} %{buildroot}%{_metainfodir}/
-appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/*.appdata.xml
-
 
 %files -f CHIRP.lang
 %license COPYING
@@ -75,6 +70,7 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/*.appdata.xml
 %changelog
 * Sat Sep 08 2018 Richard Shaw <hobbes1069@gmail.com> - 20180906-1
 - Update to 20180906.
+- Initial build for epel7.
 
 * Thu Jul 12 2018 Fedora Release Engineering <releng@fedoraproject.org> - 20180614-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild

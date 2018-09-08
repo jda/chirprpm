@@ -18,7 +18,7 @@ BuildArch:      noarch
 
 BuildRequires:  libappstream-glib
 BuildRequires:  python2-devel
-BuildRequires:  libxml2-python2
+BuildRequires:  libxml2-python
 BuildRequires:  pyserial
 BuildRequires:  desktop-file-utils
 

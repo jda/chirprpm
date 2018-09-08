@@ -61,7 +61,6 @@ desktop-file-install \
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/pixmaps/%{name}.png
 %{_mandir}/man1/chirpw.1.gz
-%{_metainfodir}/%{name}.appdata.xml
 %{python2_sitelib}/%{src_name}_%{version}-py2.7.egg-info
 %{python2_sitelib}/%{name}/
 %exclude %{_datadir}/%{name}/locale

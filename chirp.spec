@@ -3,7 +3,7 @@
 
 Name:           chirp
 Version:        20180906
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
 Group:          Applications/Communications
@@ -16,16 +16,15 @@ Patch0:         chirp-0.2.2-install.patch
 
 BuildArch:      noarch
 
-BuildRequires:  libappstream-glib
 BuildRequires:  python2-devel
 BuildRequires:  libxml2-python
 BuildRequires:  pyserial
 BuildRequires:  desktop-file-utils
 
 Requires:       pygtk2
-Requires:       python2-libxml2
-Requires:       python2-pyserial
-Requires:       python2-suds
+Requires:       libxml2-python
+Requires:       pyserial
+Requires:       python-suds
 
 
 %description
@@ -67,6 +66,9 @@ desktop-file-install \
 
 
 %changelog
+* Mon Sep 10 2018 Richard Shaw <hobbes1069@gmail.com> - 20180906-2
+- Fix install requirements.
+
 * Sat Sep 08 2018 Richard Shaw <hobbes1069@gmail.com> - 20180906-1
 - Update to 20180906.
 - Initial build for epel7.

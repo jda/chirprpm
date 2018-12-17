@@ -2,7 +2,7 @@
 %global debug_package %{nil}
 
 Name:           chirp
-Version:        20181205
+Version:        20181214
 Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
@@ -73,6 +73,9 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/*.appdata.xml
 
 
 %changelog
+* Mon Dec 17 2018 Richard Shaw <hobbes1069@gmail.com> - 20181214-1
+- Update to 20181214.
+
 * Thu Dec 06 2018 Richard Shaw <hobbes1069@gmail.com> - 20181205-1
 - Update to 20181205.
 

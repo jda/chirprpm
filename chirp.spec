@@ -2,7 +2,7 @@
 %global debug_package %{nil}
 
 Name:           chirp
-Version:        20190102
+Version:        20190104
 Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
@@ -16,6 +16,8 @@ Patch0:         chirp-0.2.2-install.patch
 
 BuildArch:      noarch
 
+# Python 3 currently not supported, see:
+# https://chirp.danplanet.com/issues/5461
 BuildRequires:  python2-devel
 BuildRequires:  libxml2-python
 BuildRequires:  pyserial
@@ -66,6 +68,9 @@ desktop-file-install \
 
 
 %changelog
+* Fri Jan 04 2019 Richard Shaw <hobbes1069@gmail.com> - 20190104-1
+- Update to 20190104.
+
 * Wed Jan 02 2019 Richard Shaw <hobbes1069@gmail.com> - 20190102-1
 - Update to 20190102.
 

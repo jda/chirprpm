@@ -19,15 +19,25 @@ BuildArch:      noarch
 # Python 3 currently not supported, see:
 # https://chirp.danplanet.com/issues/5461
 BuildRequires:  python2-devel
+BuildRequires:  desktop-file-utils
+%if 0%{?fedora}
+BuildRequires:  python2-libxml2
+BuildRequires:  python2-pyserial
+%else
 BuildRequires:  libxml2-python
 BuildRequires:  pyserial
-BuildRequires:  desktop-file-utils
+%endif
 
 Requires:       pygtk2
+%if 0%{?fedora}
+Requires:       python2-libxml2
+Requires:       python2-pyserial
+Requires:       python2-suds
+%else
 Requires:       libxml2-python
 Requires:       pyserial
 Requires:       python-suds
-
+%endif
 
 %description
 Chirp is a tool for programming two-way radio equipment It provides a generic

@@ -6,7 +6,6 @@ Version:        20190120
 Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
-Group:          Applications/Communications
 License:        GPLv3+
 URL:            http://chirp.danplanet.com/
 Source0:        http://trac.chirp.danplanet.com/chirp_daily/daily-%{version}/%{src_name}-%{version}.tar.gz

@@ -2,8 +2,8 @@
 %global debug_package %{nil}
 
 Name:           chirp
-Version:        20190120
-Release:        2%{?dist}
+Version:        20190209
+Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
 License:        GPLv3+
@@ -77,6 +77,9 @@ desktop-file-install \
 
 
 %changelog
+* Sat Feb 09 2019 Richard Shaw <hobbes1069@gmail.com> - 20190209-1
+- Update to 20190209.
+
 * Thu Jan 31 2019 Fedora Release Engineering <releng@fedoraproject.org> - 20190120-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
 

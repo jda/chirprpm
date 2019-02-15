@@ -2,7 +2,7 @@
 %global debug_package %{nil}
 
 Name:           chirp
-Version:        20190209
+Version:        20190215
 Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
@@ -29,9 +29,7 @@ BuildRequires:  pyserial
 
 Requires:       pygtk2
 %if 0%{?fedora}
-Requires:       python2-libxml2
-Requires:       python2-pyserial
-Requires:       python2-suds
+Requires:       %{py2_dist libxml2 pyserial suds}
 %else
 Requires:       libxml2-python
 Requires:       pyserial
@@ -45,16 +43,15 @@ models under the hood.
 
 
 %prep
-%setup -q -n %{src_name}-%{version}
-%patch0 -p1 -b .inst
+%autosetup -p1 -n %{src_name}-%{version}
 
 
 %build
-%{__python2} setup.py build
+%{py2_build}
 
 
 %install
-%{__python2} setup.py install -O1 --skip-build --root="%{buildroot}" --prefix="%{_prefix}"
+%{py2_install}
 
 # Wrong .desktop config lets install the correct .desktop
 desktop-file-install \
@@ -77,6 +74,9 @@ desktop-file-install \
 
 
 %changelog
+* Fri Feb 15 2019 Richard Shaw <hobbes1069@gmail.com> - 20190215-1
+- Update to 20190215.
+
 * Sat Feb 09 2019 Richard Shaw <hobbes1069@gmail.com> - 20190209-1
 - Update to 20190209.
 

@@ -2,7 +2,7 @@
 %global debug_package %{nil}
 
 Name:           chirp
-Version:        20190219
+Version:        20190220
 Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
@@ -29,7 +29,8 @@ BuildRequires:  pyserial
 
 Requires:       pygtk2
 %if 0%{?fedora}
-Requires:       %{py2_dist libxml2 pyserial suds}
+Requires:       %{py2_dist pyserial suds-jurko}
+Requires:       python2-libxml2
 %else
 Requires:       libxml2-python
 Requires:       pyserial
@@ -74,6 +75,9 @@ desktop-file-install \
 
 
 %changelog
+* Wed Feb 20 2019 Richard Shaw <hobbes1069@gmail.com> - 20190220-1
+- Update to 20190220.
+
 * Tue Feb 19 2019 Richard Shaw <hobbes1069@gmail.com> - 20190219-1
 - Update to 20190219.
 

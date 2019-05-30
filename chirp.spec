@@ -2,7 +2,7 @@
 %global debug_package %{nil}
 
 Name:           chirp
-Version:        20190410
+Version:        20190524
 Release:        1%{?dist}
 Summary:        A tool for programming two-way radio equipment
 
@@ -75,6 +75,9 @@ desktop-file-install \
 
 
 %changelog
+* Thu May 30 2019 Richard Shaw <hobbes1069@gmail.com> - 20190524-1
+- Update to 20190524.
+
 * Wed Apr 10 2019 Richard Shaw <hobbes1069@gmail.com> - 20190410-1
 - Update to 20190410.
 

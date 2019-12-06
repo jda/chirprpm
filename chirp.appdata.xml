@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>chirp.desktop</id>
+  <name>Chirp</name>
+  <summary>CHIRP Radio Programming Tool</summary>
+  <developer_name>Dan Smith</developer_name>
+  <description>
+  <p>
+Chirp is a tool for programming two-way radio equipment It provides a generic
+user interface to the programming data and process that can drive many radio
+models under the hood.
+  </p>
+</description>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <url type="bugtracker">https://chirp.danplanet.com/projects/chirp/issues</url>
+  <url type="homepage">https://chirp.danplanet.com/projects/chirp/wiki/Home</url>
+  <project_group>none</project_group>
+  <screenshots>
+    <screenshot type="default">
+      <image height="626" width="802">https://chirp.danplanet.com/download/site/screenshot1.png</image>
+    </screenshot>
+  </screenshots>
+  <update_contact>hobbes1069@fedoraproject.org</update_contact>
+</component>
